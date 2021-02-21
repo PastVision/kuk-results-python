@@ -32,9 +32,3 @@ class CaptchaBox:
 
     def show(self):
         self.root.mainloop()
-
-
-if __name__ == '__main__':
-    box = CaptchaBox('captcha.jpeg')
-    box.show()
-    print(box.captcha)
