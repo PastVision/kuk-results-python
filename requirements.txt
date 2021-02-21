@@ -1,5 +1,4 @@
 pillow
-tkinter
 requests
 beautifulsoup4
 prettytable
