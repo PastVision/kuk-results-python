@@ -1,4 +1,6 @@
 pillow
+html5lib
+imgkit
 requests
 beautifulsoup4
 prettytable
