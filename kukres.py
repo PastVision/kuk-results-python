@@ -187,5 +187,4 @@ class KUDIGITAL:
             totalscore += int(r[11]) if r[11].isnumeric() else 0
             maxscore += int(r[9]) if r[9].isnumeric() else 0
         print(table)
-        print(
-            f'\nTotal: {totalscore}/{maxscore}    =   {round(totalscore*100/maxscore,2)}%')
+        print(f'\nTotal: {totalscore}/{maxscore}  =  {round(totalscore*100/maxscore,2)}%')
