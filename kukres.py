@@ -172,6 +172,7 @@ class KUDIGITAL:
     def displayresult(self):
         data = self.results[:4]
         totalscore = 0
+        totalScaled = 0
         maxscore = 0
         scores = [row for row in self.results if len(row) == 14]
         print('\n')
@@ -184,7 +185,13 @@ class KUDIGITAL:
         for r in scores:
             table.add_row([r[0], r[1], r[2], r[5]+'/'+r[3],
                            r[8]+'/'+r[6], r[11]+'/'+r[9], r[12]])
-            totalscore += int(r[11]) if r[11].isnumeric() else 0
+            if r[11].isnumeric():
+                totalScaled += int(r[10]) if r[12]=='F' else int(r[11])
+                totalscore += int(r[11])
+            else:
+                totalScaled += 0
+                totalscore += 0
             maxscore += int(r[9]) if r[9].isnumeric() else 0
         print(table)
         print(f'\nTotal: {totalscore}/{maxscore}  =  {round(totalscore*100/maxscore,2)}%')
+        print(f'Total Scaled to Re: {totalScaled}/{maxscore}  =  {round(totalScaled*100/maxscore,2)}%')
